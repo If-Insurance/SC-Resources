@@ -1,0 +1,7 @@
+{
+	"type": "css",
+	"flags": [
+		{ "key": "minify", "value": true},
+		{ "key": "csslint", "value": true}
+	]
+}

@@ -1,0 +1,112 @@
+/* Dependencies: btx-expandable,btx-expandable-accordion,ecmt-global-css,ecmt-fonts-css,ecmt-icons-css,ecmt-text-css */
+.btx-expandable-dropdown {
+    position: relative;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn {
+    /* fix: we need to have a color on this element for the text to be clickable in ie10 */
+    opacity: 0.1!important;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn,
+.btx-expandable-dropdown .btx-expandable-dropdown-btn-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:focus,
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.btx-expandable-dropdown .btx-expandable-dropdown-btn ~ .btx-expandable-content {
+    position: absolute;
+    display: none;
+    z-index: 3;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn-layer {
+    display: none;    
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:focus ~ .btx-expandable-dropdown-btn-layer {
+    display: block;
+}
+
+.btx-expandable-dropdown .btx-expandable-summary::selection {
+    background-color: transparent;    
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-summary-icon {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+}
+
+.btx-expandable-dropdown .btx-expandable-summary ~ .ecmt-icon-arrow-up {
+    display: none;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:focus ~ .ecmt-icon-arrow-up {
+    display: block;
+}
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:focus ~ .ecmt-icon-arrow-down {
+    display: none;
+}
+
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-summary {
+    padding: 11px 29px 10px 14px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-dropdown-btn:focus ~ .btx-expandable-summary {
+    border-radius: 3px 3px 0 0;
+}
+
+.btx-expandable-dropdown .btx-expandable-dropdown-btn:focus ~ .btx-expandable-content,
+.btx-expandable-dropdown .btx-expandable-dropdown-btn ~ .btx-expandable-content:hover {
+    display: block;
+}
+
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-dropdown-btn:focus ~ .btx-expandable-content,
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-content:hover {
+    border-radius: 0 0 3px 3px;
+}
+
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-content {
+    border: 0;
+}
+
+.btx-expandable-accordion.btx-expandable-dropdown-as-select .btx-expandable-dropdown-content {
+    border-radius: 0 0 3px 3px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.btx-expandable-dropdown.btx-expandable-animate .btx-expandable-dropdown-btn ~ .btx-expandable-content {
+    display: block;
+}
+.btx-expandable-dropdown.btx-expandable-animate .btx-expandable-dropdown-btn ~ .btx-expandable-content .btx-expandable-dropdown-content {
+    display: inherit;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .25s ease, opacity .5s ease-in, visibility .5s ease-in, overflow .5s ease-in;
+}
+.btx-expandable-dropdown.btx-expandable-animate .btx-expandable-dropdown-btn:focus ~ .btx-expandable-content .btx-expandable-dropdown-content {
+    display: inherit;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    max-height: 1000px;
+    transition: max-height 1s ease, opacity 0s ease-out, visibility 0s ease-out, overflow 1.5s ease-out;
+}
+.btx-expandable-dropdown.btx-expandable-animate .btx-expandable-dropdown-btn ~ .btx-expandable-content .btx-expandable-dropdown-content * {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.btx-expandable-dropdown.btx-expandable-animate .btx-expandable-dropdown-btn:focus ~ .btx-expandable-content .btx-expandable-dropdown-content * {
+    opacity: 1;
+    transition: opacity .5s;
+}

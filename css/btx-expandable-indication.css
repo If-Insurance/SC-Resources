@@ -1,0 +1,19 @@
+/* Dependencies: btx-expandable,ecmt-global-css,ecmt-fonts-css,ecmt-icons-css */
+.btx-expandable-indication .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-down {
+  opacity: 1;
+  display: inherit;
+  margin-right: 18px;
+}
+.btx-expandable-indication .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-down {
+  opacity: 0;
+  display: none;
+}
+.btx-expandable-indication .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-up {
+  opacity: 0;
+  display: none;
+}
+.btx-expandable-indication .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-up {
+  opacity: 1;
+  display: inherit;
+  margin-right: 18px;
+}

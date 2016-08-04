@@ -1,0 +1,7 @@
+{
+	"type": "js",
+	"flags": [
+		{ "key": "minify", "value": true},
+		{ "key": "jslint", "value": true}
+	]
+}

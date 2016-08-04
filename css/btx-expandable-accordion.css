@@ -1,0 +1,96 @@
+/* Dependencies: btx-expandable,ecmt-global-css,ecmt-fonts-css,ecmt-icons-css */
+.btx-expandable-accordion{
+    position: relative;
+}
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary {
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 12px 50px 12px 20px;
+}
+/*.btx-expandable-accordion .btx-expandable-summary:hover {
+        color: #999;
+}*/
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btx-expandable-accordion .btx-expandable-addon-title {
+    padding: 20px 50px 20px 20px;
+}
+.btx-expandable-accordion .btx-expandable-addon-title:hover {
+    color: #999;
+}
+.btx-expandable-accordion .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-addon-title:hover {
+    color: inherit;
+}
+
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-down,
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-up {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary.btx-expandable-addon-title .ecmt-icon-arrow-down,
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary.btx-expandable-addon-title .ecmt-icon-arrow-up {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-down {
+  opacity: 1;
+  display: inherit;
+  margin-right: 18px;
+}
+.btx-expandable-accordion .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-down {
+  opacity: 0;
+  display: none;
+}
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-up {
+  opacity: 0;
+  display: none;
+}
+.btx-expandable-accordion .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-summary .ecmt-icon-arrow-up {
+  opacity: 1;
+  display: inherit;
+  margin-right: 18px;
+}
+.btx-expandable-accordion .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary .btx-expandable-accordion-icon-arrow-up {
+  border-radius: 40px;
+  background: #f4f4f4;
+}
+
+.btx-expandable-accordion-is-boxed .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary {
+  border: 1px solid #ccc;
+}
+
+.btx-expandable-accordion-is-boxed .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary h2,
+.btx-expandable-accordion-is-boxed .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-summary h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.btx-expandable-accordion-is-boxed .btx-expandable-checkbox ~ .btx-expandable-content {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+.btx-expandable-accordion.btx-expandable-animate .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-content {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .25s ease, opacity .5s ease-in, visibility .5s ease-in, overflow .5s ease-in;
+}
+.btx-expandable-accordion.btx-expandable-animate .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    max-height: 1000px;
+    transition: max-height 1s ease, opacity 0s ease-out, visibility 0s ease-out, overflow 1.5s ease-out;
+}

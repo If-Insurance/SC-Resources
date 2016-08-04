@@ -1,0 +1,171 @@
+/* Dependencies: none */
+/* hides checkbox that is needed to make this possible with css only */
+.btx-expandable .btx-expandable-checkbox {
+    position: absolute;
+    left: -9999px;
+}
+/* removes the focus style that is set by default on form inputs by browser */
+.btx-expandable .btx-expandable-label,
+.btx-expandable .btx-expandable-label * {
+    outline: none;
+}
+
+.btx-expandable-checkbox ~ .btx-expandable-content {
+    display: none;
+}
+
+.btx-expandable-checkbox:checked ~ .btx-expandable-content {
+    display: block;
+}
+
+.btx-expandable-summary {
+    cursor: pointer;
+}
+
+.btx-expandable-animate .btx-expandable-checkbox ~ .btx-expandable-content {
+    max-height: 0px;
+    /*display: inherit;*/
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    /*transition: max-height 1.3s ease .15s,opacity 1.5s ease .15s;*/
+    /*transition: max-height 2.3s ease .15s;*/
+    transition: max-height 1s;
+}
+
+.btx-expandable-animate .btx-expandable-checkbox:checked ~ .btx-expandable-content {
+    /*display: inherit;*/
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    max-height: 1000px;
+}
+
+.btx-expandable-animate .btx-expandable-checkbox ~ .btx-expandable-content * {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.btx-expandable-animate .btx-expandable-checkbox:checked ~ .btx-expandable-content * {
+    opacity: 1;
+}
+
+.btx-expandable-checkbox ~ .btx-expandable-unchecked-show,
+.btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-show,
+.btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-show {
+    display: block;
+}
+
+.btx-expandable-checkbox ~ .btx-expandable-unchecked-hidden,
+.btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-hidden,
+.btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-hidden {
+    display: none;
+}
+
+.btx-expandable-checkbox:checked ~ .btx-expandable-checked-show,
+.btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-show,
+.btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-show {
+    display: block;
+}
+
+.btx-expandable-checkbox:checked ~ .btx-expandable-checked-hidden,
+.btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-hidden,
+.btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-hidden {
+    display: none;
+}
+
+@media(min-width: 981px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-desktop-show,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-desktop-show,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-desktop-show {
+        display: block;
+    }
+}
+
+@media(min-width: 661px) and (max-width: 980px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-tablet-show,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-tablet-show,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-tablet-show {
+        display: block;
+    }
+}
+
+@media(max-width: 660px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-mobile-show,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-mobile-show,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-mobile-show {
+        display: block;
+    }
+}
+
+@media(min-width: 981px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-desktop-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-desktop-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-desktop-hidden {
+        display: none;
+    }
+}
+
+@media(min-width: 661px) and (max-width: 980px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-tablet-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-tablet-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-tablet-hidden {
+        display: none;
+    }
+}
+
+@media(max-width: 660px) {
+    .btx-expandable-checkbox ~ .btx-expandable-unchecked-mobile-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-content .btx-expandable-unchecked-mobile-hidden,
+    .btx-expandable-checkbox ~ .btx-expandable-label .btx-expandable-unchecked-mobile-hidden {
+        display: none;
+    }
+}
+
+@media(min-width: 981px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-desktop-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-desktop-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-desktop-hidden {
+        display: none;
+    }
+}
+
+@media(min-width: 661px) and (max-width: 980px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-tablet-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-tablet-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-tablet-hidden {
+        display: none;
+    }
+}
+
+@media(max-width: 660px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-mobile-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-mobile-hidden,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-mobile-hidden {
+        display: none;
+    }
+}
+
+@media(min-width: 981px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-desktop-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-desktop-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-desktop-show {
+        display: block;
+    }
+}
+
+@media(min-width: 661px) and (max-width: 980px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-tablet-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-tablet-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-tablet-show {
+        display: block;
+    }
+}
+
+@media(max-width: 660px) {
+    .btx-expandable-checkbox:checked ~ .btx-expandable-checked-mobile-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-content .btx-expandable-checked-mobile-show,
+    .btx-expandable-checkbox:checked ~ .btx-expandable-label .btx-expandable-checked-mobile-show {
+        display: block;
+    }
+}
